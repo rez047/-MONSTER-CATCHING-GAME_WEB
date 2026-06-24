@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+
+<h1>
+Your Monster Team
+</h1>
+
+
+
+{% for m in monsters %}
+
+
+<div class="monster-card">
+
+
+<img src="/static/images/{{m.image}}">
+
+
+<h2>
+{{m.name}}
+</h2>
+
+
+<p>
+Type:
+{{m.element}}
+</p>
+
+
+<p>
+Level:
+{{m.level}}
+</p>
+
+
+<p>
+❤️ {{m.hp}}
+</p>
+
+
+<p>
+⚔ {{m.attack}}
+</p>
+
+
+<a class="button"
+href="/train/{{m.id}}">
+
+Train
+
+</a>
+
+
+<a class="button"
+href="/battle/{{m.id}}">
+
+Battle
+
+</a>
+
+
+
+</div>
+
+
+{% endfor %}
+
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class="container">
+
+
+<h1>🌲 Wild Area</h1>
+
+
+<h2>
+{{message}}
+</h2>
+
+
+
+<div class="monster-card">
+
+
+<img src="/static/images/{{monster.image}}">
+
+
+
+<h2>
+{{monster.name}}
+</h2>
+
+
+<p>
+Element:
+{{monster.element}}
+</p>
+
+
+<p>
+❤️ HP:
+{{monster.hp}}
+</p>
+
+
+<p>
+⚔ Attack:
+{{monster.attack}}
+</p>
+
+
+
+</div>
+
+
+
+<form method="POST">
+
+
+<button name="action"
+value="catch">
+
+🎯 Catch Monster
+
+</button>
+
+
+
+<button name="action"
+value="search">
+
+🌿 Find Another
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+{% endblock %}
